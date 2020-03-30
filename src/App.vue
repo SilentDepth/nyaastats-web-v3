@@ -19,6 +19,8 @@
   })
 </script>
 
+<style src="./assets/css/base.scss" lang="scss"></style>
+
 <style lang="scss">
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;

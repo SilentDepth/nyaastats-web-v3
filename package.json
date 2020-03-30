@@ -8,15 +8,16 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "vue": "^3.0.0-alpha.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-typescript": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
+    "@vue/compiler-sfc": "^3.0.0-alpha.4",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
     "typescript": "~3.7.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-cli-plugin-vue-next": "~0.0.4"
   }
 }

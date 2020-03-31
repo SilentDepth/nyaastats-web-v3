@@ -3,9 +3,9 @@
     <h1 class="py-5"><span class="inline-block text-4xl w-36 bg-cool-gray-800"></span></h1>
   </div>
   <div class="w-page mx-auto pb-5 flex items-start">
-    <div class="flex-none w-aside">
+    <div class="flex-none">
       <div class="border border-gray-800 rounded-md">
-        <div class="h-aside"></div>
+        <div class="w-aside h-aside"></div>
         <div class="h-12 border-t border-gray-800"></div>
         <div class="h-12 border-t border-gray-800"></div>
         <div class="h-12 border-t border-gray-800"></div>

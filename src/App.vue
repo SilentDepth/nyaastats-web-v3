@@ -2,7 +2,7 @@
   <div id="app" class="min-h-screen bg-gray-900 text-gray-300 flex flex-col">
     <div class="flex-none h-header bg-black text-gray-500">
       <header class="w-page h-header mx-auto flex">
-        <strong class="self-center font-medium">毛玉線圈物語 Player Stats</strong>
+        <RouterLink to="/" class="self-center font-medium">毛玉線圈物語 Player Stats</RouterLink>
         <span class="self-center w-6 h-6 ml-auto bg-cool-gray-800"></span>
       </header>
     </div>

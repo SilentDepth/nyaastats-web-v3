@@ -19,7 +19,7 @@
         </div>
         <div class="ml-10">
           <dt class="mb-2">玩家总数</dt>
-          <dd class="text-4xl font-medium"></dd>
+          <dd class="text-4xl font-medium">{{ playersJson?.length ?? '...' }}</dd>
         </div>
       </dl>
     </section>
@@ -51,14 +51,15 @@
 
   import {state as footerState} from '@/components/AppFooter.vue'
   import useInfoJson from '@/composables/info-json'
+  import usePlayersJson from '@/composables/players-json'
 
   export default defineComponent({
     name: 'HomeView',
 
     setup () {
-      const infoJson = useInfoJson()
+      // Process info.json
 
-      watchEffect(() => footerState.dataUpdateTime = infoJson.value?.lastUpdate ?? null)
+      const infoJson = useInfoJson()
 
       const worldAge = computed(() => {
         if (infoJson.value === null) return '...'
@@ -67,9 +68,17 @@
         return formatDistanceStrict(now, add(now, {seconds: infoJson.value.worldTime}), {roundingMethod: 'floor', locale: zhCN})
       })
 
+      watchEffect(() => footerState.dataUpdateTime = infoJson.value?.lastUpdate ?? null)
+
+      // Process players.json
+
+      const playersJson = usePlayersJson()
+
       return {
         infoJson,
         worldAge,
+
+        playersJson,
       }
     },
   })

@@ -1,9 +1,16 @@
+@import url('/font/inter.css');
+
 @tailwind base;
 
 html {
-  @apply leading-none font-sans antialiased;
+  @apply leading-none antialiased;
 
+  font-family: Inter, theme('fontFamily.sans');
   font-size: 16px;
+
+  @supports (font-variation-settings: normal) {
+    font-family: 'Inter var', theme('fontFamily.sans');
+  }
 }
 
 span.inline-block.bg-cool-gray-800 {

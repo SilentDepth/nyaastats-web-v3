@@ -30,18 +30,7 @@
       <span class="w-16 ml-auto bg-cool-gray-800"></span>
     </div>
   </div>
-  <div class="w-page mx-auto py-5">
-    <div class="flex flex-wrap -ml-5 -mt-5">
-      <div v-for="n of 40" :key="n" class="flex-grow-0 flex-shrink w-1/4 pl-5 mt-5">
-        <RouterLink to="/player" class="p-4 border border-gray-800 rounded-md flex">
-          <i class="w-16 h-16 border border-cool-gray-800 rounded-md"></i>
-        </RouterLink>
-      </div>
-    </div>
-    <div class="mt-5 py-4 border border-gray-800 rounded-md text-center">
-      <span class="inline-block w-20 bg-cool-gray-800"></span>
-    </div>
-  </div>
+  <PlayerList />
 </template>
 
 <script lang="ts">
@@ -49,12 +38,17 @@
   import {add, formatDistanceStrict} from 'date-fns'
   import {zhCN} from 'date-fns/locale'
 
+  import PlayerList from '@/components/home-view/PlayerList.vue'
   import {state as footerState} from '@/components/AppFooter.vue'
   import useInfoJson from '@/composables/info-json'
   import usePlayersJson from '@/composables/players-json'
 
   export default defineComponent({
     name: 'HomeView',
+
+    components: {
+      PlayerList,
+    },
 
     setup () {
       // Process info.json

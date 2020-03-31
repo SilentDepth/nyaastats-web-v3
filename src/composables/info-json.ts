@@ -1,6 +1,6 @@
 import {ref, Ref} from 'vue'
 
-import {TimeSecond} from '@/common/types'
+import {TimeSecond, TimeMillisecond} from '@/common/types'
 
 interface InfoJson {
   worldTime: TimeSecond
@@ -9,7 +9,7 @@ interface InfoJson {
     short: string
     compact: string
   }
-  lastUpdate: number
+  lastUpdate: TimeMillisecond
   advancementsProgress: {
     nether: {
       all_potions: number

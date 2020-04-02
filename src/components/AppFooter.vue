@@ -31,4 +31,9 @@
       }
     },
   }
+
+  type State = typeof state
+  declare module '@/components/AppFooter.vue' {
+    export const state: State
+  }
 </script>

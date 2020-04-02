@@ -18,3 +18,7 @@ span.inline-block.bg-cool-gray-800 {
 }
 
 @tailwind utilities;
+
+.image-pixelated {
+  image-rendering: pixelated;
+}

@@ -2,7 +2,7 @@
   <div class="border-b border-gray-800">
     <section class="w-page mx-auto py-12 flex items-center">
       <div>
-        <h1 class="mb-5 text-5xl font-black">{{ infoJson.servername }}</h1>
+        <h1 class="mb-5 text-5xl font-black">{{ infoJson?.servername }}</h1>
         <p>
           <a :href="infoJson.homepage" target="_blank" class="text-blue-500 inline-flex items-center">
             <span class="text-xl">去看看</span>

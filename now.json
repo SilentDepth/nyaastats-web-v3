@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "alias": "nyaastats-v3.silent.land",
+  "routes": [
+    {
+      "src": "/data/(.*)",
+      "dest": "https://stats.craft.moe/data/$1"
+    }
+  ]
+}
